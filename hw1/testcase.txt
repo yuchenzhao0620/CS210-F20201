@@ -1,0 +1,16 @@
+print(read_ratings_data())  # 1.1
+print(read_movie_genre())  # 1.2
+print(create_genre_dict(read_movie_genre()))  # 2.1
+print(calculate_average_rating(read_ratings_data()))  # 2.2
+print(get_popular_movies(calculate_average_rating(read_ratings_data())))  # 3.1
+print(filter_movies(calculate_average_rating(read_ratings_data())))  # 3.2
+print(
+    get_popular_in_genre('Comedy', create_genre_dict(read_movie_genre()),
+                         calculate_average_rating(read_ratings_data()), 5))  # 3.3
+print(get_genre_rating('Comedy', create_genre_dict(read_movie_genre()),
+                       calculate_average_rating(read_ratings_data())))  # 3.4
+print(genre_popularity(create_genre_dict(read_movie_genre()), calculate_average_rating(read_ratings_data()), 5))  # 3.5
+print(read_user_ratings())  # 4.1
+print(get_user_genre(1, read_user_ratings(), read_movie_genre()))  # 4.2
+print(recommend_movies(1, read_user_ratings(), read_movie_genre(),
+                       calculate_average_rating(read_ratings_data()), ))  # 4.3
